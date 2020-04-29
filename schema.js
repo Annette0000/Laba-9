@@ -8,7 +8,7 @@ const typeDefs = gql`
   }
   type Mission {
     name: String
-    missionPatch(size: PatchSize): String
+    missionPatch(mission: String, size: PatchSize): String
   }
   type Launch {
     id: ID!
