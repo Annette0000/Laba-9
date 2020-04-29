@@ -5,7 +5,10 @@
     "apollo-datasource-rest": "0.8.1",
     "apollo-server": "2.9.7",
     "graphql": "14.5.8",
-    "graphql-tag": "^2.10.1"
+    "graphql-tag": "^2.10.1",
+    "isemail": "3.2.0",
+    "sequelize": "5.21.7",
+    "sqlite3": "4.2.0"
   },
   "license": "MIT",
   "main": "index.js",
