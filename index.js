@@ -7,12 +7,6 @@ const resolvers = require("./resolvers");
 const isEmail = require("isemail");
 
 const store = createStore();
-/*
-const resolvers = {
-  Query: {
-    hell: () => "aaaaaa!"
-  }
-};*/
 
 const server = new ApolloServer({
   context: async ({ req }) => {
