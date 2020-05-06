@@ -27,7 +27,8 @@ const server = new ApolloServer({
     userAPI: new UserAPI({ store })
   }),
   resolvers,
-  introspection: true
+  introspection: true,
+  playground: true
 });
 
 server.listen(port, () => {
