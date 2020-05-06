@@ -5,8 +5,9 @@ const LaunchAPI = require("./datasources/launch");
 const UserAPI = require("./datasources/user");
 const resolvers = require("./resolvers");
 const isEmail = require("isemail");
-
 const store = createStore();
+
+const port = process.env.PORT || 4000;
 
 const server = new ApolloServer({
   context: async ({ req }) => {
@@ -29,6 +30,6 @@ const server = new ApolloServer({
   introspection: true
 });
 
-server.listen().then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`);
+server.listen(port, () => {
+  console.log("Listening on port:" + String(port));
 });
