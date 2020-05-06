@@ -25,9 +25,10 @@ const server = new ApolloServer({
     launchAPI: new LaunchAPI(),
     userAPI: new UserAPI({ store })
   }),
-  resolvers
+  resolvers,
+  introspection: true
 });
 
-server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+server.listen().then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
